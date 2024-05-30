@@ -20,10 +20,11 @@
 
 - `(\x.x) (\f.\x.x)`：返回 `\.\.0`
 - `(\x.\y. y)(\f.\x.x)(\f.\x.f)` ：返回 `\.\.1`
-- `(\n.\f.\x.n(\g.\h.h(g f))(\u.x)(\u.u))((\n.\f.\x.f (n f x))(\f.\x.x))`：返回 `\.\.0` （即`PRED(SUCC(ZERO))=ZERO`）
+- `(\n.\f.\x.n(\g.\h.h(g f))(\u.x)(\u.u))((\n.\f.\x.f (n f x))(\f.\x.x))`：返回 `\.\.0`
+  （即`PRED(SUCC(ZERO))=ZERO`）
 
 ## De Bruijn index
-De Bruijn index 是一种命名规范，由于lambda演算中名字并不重要，我们希望对Indentifier（抽象中的LCID或作为单独的atom）使用数字0，1，2...进行规范，而不是使用x、y等字母，这一命名与lambda项中的抽象嵌套的深度有关，而并列的term命名并不影响（就像使用x、y时重名也不会影响）
+De Bruijn index 是一种命名规范，由于Lambda演算中名字并不重要，我们希望对Indentifier使用数字0，1，2...进行规范，而不是使用x、y等字母，这一命名与Lambda项中的抽象嵌套的深度有关，而并列的term命名并不影响（就像使用x、y时重名也不会影响）
 
 使用0表示同层的变量，1表示高一层的变量，以此类推
 
